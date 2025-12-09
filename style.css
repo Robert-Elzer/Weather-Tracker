@@ -1,0 +1,249 @@
+body {
+    margin: 0;
+    padding: 1rem;
+}
+
+.hidden {
+    display: none;
+}
+
+h1 {
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+    color: blue;
+}
+
+#search-area {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+#city-input {
+    padding: 0.75rem;
+    margin: 5px;
+    font-size: 16px;
+    border: 1px solid #0056b3;
+    border-radius: 0.5rem;
+    flex-grow: 1;
+}
+
+#search-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: #007BFF;
+    color: white;
+}
+
+#search-button:hover {
+    background-color: #0056b3;
+    color: white;
+}
+
+#refresh-button {
+    font-weight: 600;
+    font-size: 1.25rem;
+    padding: 0.75rem 1rem;
+    border-radius: 0.5rem;
+    background-color: #007BFF;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#api-key-warning {
+    text-align: center;
+    color: red;
+    font-weight: bold;
+    display: hidden;
+}
+
+h2 {
+    font: bold;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+    color: gray;    
+}
+
+.current-card {
+    padding: 1.5rem;
+    border-radius: 2rem;
+    margin-bottom: 2rem;
+}
+
+#current-weather {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+
+.temp-display {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.5rem;
+}
+
+.temp-display p {
+    font-size: 3.75rem;
+    font-weight: 800;
+    color: #3730a3;
+}
+
+.temp-display .icon {
+    font-size: 2.25rem;
+    margin-top: 0.25rem;
+}
+
+.condition-label {
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: -0.025rem;
+}
+
+.location-label {
+    font-size: 1.125rem;
+    font-weight: 500;
+    margin-top: 0.25rem;
+}
+
+.metric-grid {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+    padding-top: 0.75rem;
+    border-top: 1px solid #e5e7eb;
+}
+
+.metric-row {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: #374151;
+}
+
+.metric-row span {
+    font-size: 1.5rem;
+}
+
+.timeline-panel {
+    background-color: #ffffff;
+    padding: 1.5rem;
+    border-radius: 0.75rem;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.timeline-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: blue;
+    text-align: center;
+}
+
+.hourly-scroll {
+    display: flex;
+    overflow-x: scroll;
+    gap: 1rem;
+    padding-bottom: 1rem;
+}
+
+.hour-item {
+    flex-shrink: 0;
+    flex-wrap: wrap;
+    width: 7rem;
+    padding: 1rem;
+    text-align: center;
+    border-radius: 0.75rem;
+    border: 1px solid #f3f4f6;
+    background-color: #007BFF;
+    box-shadow: 0 1px 3px  rgba(0, 0, 0, 0.05);
+    transition: transform 200ms, box-shadow 200ms;
+}
+
+.hour-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.hour-item.now {
+    background-color: navy;
+    border-color: #000080;
+    color: #ffffff;
+}
+
+.hour-item .time {
+    font-weight: 700;
+    font-size: 1rem;
+    margin-bottom: 0.25rem;
+}
+
+.hour-item .icon {
+    font-size: 1.875rem;
+    margin: 0.5rem 0;
+}
+
+.hour-item .temp {
+    font-weight: 600;
+    font-size: 1.25rem;
+}
+
+.hour-item .condition {
+    font-size: 0.75rem;
+    margin-top: 0.25rem;
+    color: #ffffff;
+}
+
+.hour-item .precip {
+    font-size: 0.75rem;
+    margin-top: 0.25rem;
+    color: #ffffff;
+}
+
+@media (min-width: 640px) {
+    body {
+        padding: 2rem;
+    }
+    .controls-layout {
+        flex-direction: row;
+    }
+    .current-details {
+        flex-direction: row;
+        align-items: center;
+        padding: 1.5rem;
+    }
+    .current-details > div {
+        margin-bottom: 0;
+    }
+    .temp-display p {
+        font-size: 4.5rem;
+    }
+    .condition-label {
+        font-size: 1.875rem;
+    }
+    .metric-grid {
+        width: auto;
+        padding-top: 0;
+        padding-left: 2rem;
+        border-top: none;
+        border-left: 1px solid #e5e7eb;
+    }
+}
+
+h3 {
+    font: semibold;
+    color: gray;
+}
+
+#message-area {
+    text-align: center;
+}
